@@ -1,0 +1,13 @@
+// Mixin para botones
+
+@mixin button-style($bg-color, $text-color, $hover-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
