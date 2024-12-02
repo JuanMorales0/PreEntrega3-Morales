@@ -1,0 +1,158 @@
+/* Ajuste de vista móvil para el index */
+
+@media screen and (max-width: 768px) {
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+
+  .user-options,
+  .barrabusqueda {
+  margin: 0;
+  padding: 0;
+  }
+
+    .user-options {
+      justify-content: left;
+      flex-direction: column;
+      gap: 8px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .barrabusqueda {
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+      
+
+      input,
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+
+  main.content {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 16px;
+    padding-bottom: 100px;
+
+    .sidebar {
+      display: none;
+
+    .productos {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+  footer {
+  width: 100%;
+  text-align: center;
+  position: fixed; 
+  bottom: 0; 
+  padding: 20px;
+  background-color: $color-secundario;
+  color: $color-texto;;
+
+    .masinformacioncontenedor {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+}
+
+
+  /* Ajuste de vista móvil para el iniciarsesion */
+
+@media (max-width: 768px) and (orientation: landscape) {
+  main.contenedorsesion,
+  main.contenedorcarrito {
+    padding: 16px;
+    width: 100%;
+
+    .login-form {
+      max-width: 90%; 
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .login-button {
+      padding: 14px; 
+      font-size: 16px;
+    }
+
+    .forgot-password {
+      font-size: 14px;
+    }
+  }
+}
+
+.carritoitems {
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* Ajuste de vista móvil para el carrito */
+
+@media (max-width: 768px) and (orientation: landscape) {
+  main.contenedorcarrito {
+    padding: 16px;
+    width: 100%;
+
+    .carritoitems {
+      max-width: 100%; 
+      padding: 10px;
+
+      .item {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 10px; 
+        border-radius: 8px;
+
+        img {
+          width: 100px; 
+          height: auto;
+        }
+
+        .item-details {
+          text-align: center;
+          padding: 0;
+        }
+
+        .remove-item {
+          padding: 10px 14px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .compra {
+      max-width: 80%; 
+      margin: 0 auto;
+
+      .checkout-button {
+        padding: 14px;
+        font-size: 16px;
+      }
+    }
+  }
+}
